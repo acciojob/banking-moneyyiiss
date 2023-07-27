@@ -6,6 +6,14 @@ import java.util.HashMap;
 public class CurrentAccount extends BankAccount{
     String tradeLicenseId; //consists of Uppercase English characters only
 
+    public String getTradeLicenseId() {
+        return tradeLicenseId;
+    }
+
+    public void setTradeLicenseId(String tradeLicenseId) {
+        this.tradeLicenseId = tradeLicenseId;
+    }
+
     public CurrentAccount(String name, double balance, String tradeLicenseId) throws Exception {
         super(name, balance);
         this.tradeLicenseId = tradeLicenseId;

@@ -44,18 +44,12 @@ public class BankAccount {
         //Each digit of an account number can lie between 0 and 9 (both inclusive)
         //Generate account number having given number of 'digits' such that the sum of digits is equal to 'sum'
         //If it is not possible, throw "Account Number can not be generated" exception
-        int sum1 = 0;
-        int dummy = digits;
-        while(dummy != 0){
-            int f = dummy % 10;
-            dummy /= 10;
-            sum1+=dummy;
 
-        }
-        if(sum1 != sum){
+        if(sum > 9*digits){
             throw new Exception("Account Number can not be generated");
         }
-        return "Your account number is generated";
+        return null;
+
     }
 
     public void deposit(double amount) {

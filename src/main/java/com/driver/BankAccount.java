@@ -63,8 +63,7 @@ public class BankAccount {
 
     public void deposit(double amount) {
         //add amount to balance
-        this.balance +=amount;
-        System.out.println(amount + "has been deposited in your account");
+        balance +=amount;
 
     }
 
@@ -73,8 +72,8 @@ public class BankAccount {
         if(balance-amount < minBalance){
             throw new Exception("Insufficient Balance");
         }else{
-            this.balance-=amount;
-            System.out.println(amount + "has been withdrawn. Remaining Balance is " + this.balance);
+            balance-=amount;
+
         }
     }
 
